@@ -1,11 +1,14 @@
 import React from 'react';
+import Layout from './components/Layout/Index';
+import RouterComponent from './RouterComponent';
 
-function App() {
+
+const App: React.FC = () => {
 
   return (
-    <div className="App">
-      HELLO
-    </div>
+    <Layout>
+      <RouterComponent />
+    </Layout>
   );
 }
 
