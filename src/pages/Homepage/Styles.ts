@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const StyledContainer = styled.div`
 
   width: 100%;
-  height: calc(100vh - 140px);   
+  height: calc(100vh - 190px);   
   display: flex;
   justify-content: center;
   overflow-y: auto;
