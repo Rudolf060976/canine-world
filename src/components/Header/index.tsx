@@ -2,7 +2,7 @@ import React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Container from '@mui/material/Container';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
+
 import { useAppSelector } from '../../redux/hooks';
 import { selectIsFetching } from '../../redux/slices/fetching';
 import dogImage from '../../shared/images/dog3.png';
@@ -11,7 +11,8 @@ import {
   StyledLink,
   StyledImage,
   StyledHomeContainer,
-  StyledHomeTitle
+  StyledHomeTitle,
+  StyledMainTitle
 } from './styles';
 
 const Header: React.FC = () => {
@@ -28,14 +29,7 @@ const Header: React.FC = () => {
         <StyledLink to="/">
           <Toolbar disableGutters >
             <StyledImage src={dogImage} alt="dog-image" />     
-            <Typography
-              variant="h3"
-              noWrap
-              component="div"
-              sx={{ mr: 2, ml: 3, display: { md: 'flex' }, fontFamily: 'Fuzzy Bubbles, cursive', color: 'white' }}            
-            >
-              Mundo Canino
-            </Typography>  
+            <StyledMainTitle>Mundo Canino</StyledMainTitle>  
             <StyledHomeContainer>
               {
                 location.pathname !== '/' &&

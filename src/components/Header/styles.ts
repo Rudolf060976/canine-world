@@ -33,5 +33,30 @@ export const StyledHomeContainer = styled.div`
 export const StyledHomeTitle = styled.h3`
 
   color: white;
+  font-family: Fuzzy Bubbles, cursive;
+  color: 'white';
+  font-size: 20px;  
+  min-width: 50px;
+  transition: all .3s linear;
 
+  &:hover {
+    color: #EAC9FF;
+    transform: scaleX(1.2);
+  }
+
+`;
+
+export const StyledMainTitle = styled.h1`
+
+  font-family: Fuzzy Bubbles, cursive;
+  color: 'white';
+  font-size: 42px;
+  margin-left: 50px;
+  min-width: 350px;
+  transition: all .3s linear;
+  
+  &:hover {
+    color: #EAC9FF;
+    transform: scaleX(1.2);
+  }
 `;
