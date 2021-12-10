@@ -77,7 +77,7 @@ const FavoriteSubBreed: React.FC = () => {
   
   return (
     <StyledContainer>
-      <Card sx={{ maxWidth: 345, boxShadow: '0px 0px 10px gray' }}>
+      <Card sx={{ maxWidth: 345, height: 440, boxShadow: '0px 0px 10px gray' }}>
           <CardActionArea>         
             {displayImage()}
             <CardContent>
