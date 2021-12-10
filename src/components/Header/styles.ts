@@ -14,3 +14,24 @@ export const StyledLink = styled(Link)`
   color: white;
 
 `;
+
+export const StyledImage = styled.img`
+
+  width: 130px;
+
+`;
+
+export const StyledHomeContainer = styled.div`
+
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+`;
+
+export const StyledHomeTitle = styled.h3`
+
+  color: white;
+
+`;
