@@ -2,30 +2,30 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import type { RootState } from '../store'
 
 interface FavoriteStateType {
-  favoriteName: string
-  favoriteImage: string
+  favoriteName: string;
+  favoriteImage: string;
+  breedName: string;  
 }
 
 const initialState: FavoriteStateType = {
   favoriteName: '',
-  favoriteImage: ''
+  favoriteImage: '',
+  breedName: ''
 };
 
 export const favoriteSubBreedSlice = createSlice({
   name: 'favorite',
   initialState,
   reducers: {
-    addFavorite: (state, action: PayloadAction<{ name: string, image: string}>) => {
-      state = {
-        favoriteName: action.payload.name,
-        favoriteImage: action.payload.image
-      }      
+    addFavorite: (state, action: PayloadAction<{ name: string, image: string, breedName: string}>) => {      
+      state.favoriteName = action.payload.name;
+      state.favoriteImage = action.payload.image;
+      state.breedName = action.payload.breedName;
     },
     clearFavorite: (state) => {
-      state = {
-        favoriteName: '',
-        favoriteImage: ''
-      }
+      state.favoriteName = '';
+      state.favoriteImage = '';
+      state.breedName = '';
     }
   }
 });

@@ -4,9 +4,9 @@ import {
   BrowserRouter as Router,
   Route,  
 } from 'react-router-dom'
-import BreedPage from './pages/Breed/Index'
-import Homepage from './pages/Homepage/Index'
-import PageNotFound from './pages/PageNotFound/Index'
+import BreedPage from './pages/Breed'
+import Homepage from './pages/Homepage'
+import PageNotFound from './pages/PageNotFound'
 
 const RouterComponent:React.FC = () => {
 

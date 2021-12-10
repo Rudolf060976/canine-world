@@ -24,4 +24,22 @@ export const fetchAllImagesBySubBreed = async (breed: string, subBreed: string):
 
 }
 
+export const fetchOneImageForEverySubBreed = async (breed: string, subBreeds: string[]): Promise<SubBreedRandomImageResponseType[]> => {
+
+  const endpointsArray = subBreeds.map(subBreed => `https://dog.ceo/api/breed/${breed}/${subBreed}/images/random`)
+
+  const responseArray = await axios.all(endpointsArray.map(async endpoint => {
+
+    return await axios.get(endpoint);
+
+  })) as {
+    data: SubBreedRandomImageResponseType
+  }[];
+
+  const cleanedResponse = responseArray.map(response => response.data)
+
+  return cleanedResponse
+
+}
+
 

@@ -1,15 +1,18 @@
 import React from 'react'
-
+import Layout from '../../components/Layout'
+import image404 from '../../shared/images/404.jpeg'
 import {
-  StyledContainer
-} from './Styles'
-
+  StyledContainer,
+  StyledImage
+} from './styles'
 
 const PageNotFound: React.FC = () => {
   return (
-    <StyledContainer>
-      PAGE NOT FOUND!!!
-    </StyledContainer>
+    <Layout>
+      <StyledContainer>
+        <StyledImage src={image404} alt='Dog-Image' />
+      </StyledContainer>
+    </Layout>  
   )
 }
 
